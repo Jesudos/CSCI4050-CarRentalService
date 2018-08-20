@@ -1,0 +1,6 @@
+FROM jboss-webserver-3/webserver31-tomcat7-openshift:1.2
+ENV JAVA_APP_JAR CarRentalService.war
+ENV AB_OFF true
+EXPOSE 8080
+ADD $JAVA_APP_JAR /deployments/
+
